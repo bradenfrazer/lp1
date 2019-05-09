@@ -47,9 +47,19 @@ h6,
 	border-color: #00d9e1;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
 .display-3 {
+	font-size: 4rem;
+}
+
+.display-4 {
 	font-size: 3rem;
+}
+}
+
+@media (max-width: 768px) {
+.display-3 {
+	font-size: 2.5rem;
 }
 
 .display-4 {
@@ -169,7 +179,7 @@ h6,
 	z-index: -1;
   background-image: url('hero.jpg');
 	background-size: cover;
-	background-position: center;
+	background-position: 15% 0%;
   transform: skewY(-5deg);
   transform-origin: top left;
 }
@@ -185,6 +195,26 @@ h6,
   transform: translate(-100%);
   animation: slide 2s forwards;
   animation-delay: 0s;
+}
+
+/* fix mobile nav size conflicts */
+@media (max-width: 768px) {
+	.jumbotron .container {
+		margin-top: 75px;
+		height: auto;
+		min-height: 0px;
+		justify-content: flex-start;
+	}
+
+	.hero-bg {
+		height: 550px;
+	}
+}
+
+@media (max-width: 576px) {
+	.jumbotron .container {
+		padding: 0;
+	}
 }
 
 @keyframes slide {
@@ -267,6 +297,14 @@ h6,
 	background: #FFF;
 	transform: skewY(-5deg);
 	transform-origin: top left;
+}
+
+/* fix mobile nav size conflicts */
+@media (max-width: 768px) {
+
+	.services .services-bg {
+		height: 550px;
+	}
 }
 
 .services .col-lg-12 {
